@@ -28,7 +28,7 @@ Go to the address http://YOUR_HOST:8080/weather and see the start page:
 
 ![01_MVC_start_page.png](images%2F01_MVC_start_page.png)  
 
-Enter your OpenWeather API Key and city you want to know the weather.
+Enter your OpenWeather API Key and city you want to know the weather.  
 Click Send request button and the information should appear in the field below:
 
 ![01_MVC_result.png](images%2F01_MVC_result.png)
