@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: kameleoon-weather-sdk
+  mvc:
+    format.date: iso
+openweather:
+  api:
+    uri: https://api.openweathermap.org/data/2.5/weather
+app:
+  cache:
+    cache-names:
+      - cityWeather
+    caches:
+      cityWeather:
+        expiry: 10m
+        limit: 10
+logging:
+  level:
+    root: INFO
+    org.springframework.web.client: TRACE

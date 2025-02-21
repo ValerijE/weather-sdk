@@ -1,0 +1,3 @@
+openweather:
+  api:
+    uri: http://localhost:54321/data/2.5/weather

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather SDK request page</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<h2>Welcome to Weather SDK!</h2>
+<br>
+<form th:action="@{weather}" th:object="${requestPayload}" method="post">
+    <label for="apiKey">Enter your OpenWeather API Key:
+        <input type="text" th:field="*{apiKey}" id="apiKey" th:value="${requestPayload.apiKey}" required>
+    </label>
+    <br>
+    <br>
+    <label for="city">Enter the city in which you want to know the weather:
+        <input type="text" id="city" name="city" th:value="${requestPayload.city}" required>
+    </label>
+    <br>
+    <br>
+    <button type="submit">Send request</button>
+</form>
+<br>
+<div th:if="${weather != null and errors == null}">
+    <label for="weather">Result:
+        <br>
+        <textarea th:text="${weather}" id="weather" style="width: 300px; height: 370px" readonly ></textarea>
+    </label>
+</div>
+<div th:if="${errors}">
+    <p style="color: red" th:each="error : ${errors}" th:text="${error.defaultMessage}">Error message</p>
+</div>
+</body>
+</html>
