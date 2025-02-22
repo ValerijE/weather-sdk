@@ -2,12 +2,16 @@
 Web service for obtaining weather information in a selected city
 
 ## Installation
+Oracle openjdk-21 must be pre-installed.  
+Copy and, if necessary, unzip the application source files to any location on your Linux PC.  
 To install the application, you should call the application script in the root of the package.  
 The first time the script is called, it should be done in the following sequence:  
 
 - **./application init** - init working directory and download latest source code  
 - **./application build** - run JUnit tests to check app health (-skipTests arg to skip tests) and build jar  
 - **./application up** - launch application  
+
+The application files of latest version will be installed in the directory /home/USER/Workspace/weather-sdk .  
 
 If the application is already installed and you want to update to the latest version, the script call sequence is as follows:
 - **./application clean** - clean working directory
